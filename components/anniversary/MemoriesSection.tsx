@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
 
 const memories = [
     { id: 1, src: "https://picsum.photos/id/1015/400/500", alt: "Laughing together", rotation: -3, zIndex: 1 },
@@ -35,19 +36,23 @@ export default function MemoriesSection() {
                                     zIndex: 50,
                                     transition: { type: "spring", stiffness: 300, damping: 20 }
                                 }}
-                                className="relative bg-white p-3 pb-8 shadow-lg border border-gray-100 cursor-pointer"
+                                className="relative cursor-pointer"
                                 style={{
                                     zIndex: memory.zIndex
                                 }}
                             >
-                                <div className="relative w-64 md:w-72 h-80 overflow-hidden bg-gray-100">
-                                    <Image
-                                        src={memory.src}
-                                        alt={memory.alt}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
+                                <Card className="p-3 pb-8 shadow-lg border-gray-100 rounded-sm bg-white hover:shadow-xl transition-shadow">
+                                    <CardContent className="p-0">
+                                        <div className="relative w-64 md:w-72 h-80 overflow-hidden bg-gray-100">
+                                            <Image
+                                                src={memory.src}
+                                                alt={memory.alt}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                    </CardContent>
+                                </Card>
                             </motion.div>
                         </div>
                     ))}

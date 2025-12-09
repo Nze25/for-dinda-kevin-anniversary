@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { MapPin } from "lucide-react";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 export default function FirstDateSection() {
     return (
@@ -20,19 +21,23 @@ export default function FirstDateSection() {
                     transition={{ duration: 0.8, type: "spring" }}
                     className="relative group mx-auto md:mx-0 max-w-sm"
                 >
-                    <div className="bg-white p-4 pb-16 shadow-xl transform rotate-[-3deg] transition-transform duration-500 group-hover:rotate-0 border border-gray-100">
-                        <div className="relative aspect-[3/4] overflow-hidden bg-gray-100">
-                            <Image
-                                src="https://picsum.photos/id/1015/600/800" // Placeholder, replace with first date photo
-                                alt="Our First Date"
-                                fill
-                                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            />
-                        </div>
-                        <div className="absolute bottom-4 left-0 right-0 text-center font-caveat text-3xl text-gray-700">
-                            The Day It Started
-                        </div>
-                    </div>
+                    <Card className="transform rotate-[-3deg] transition-transform duration-500 group-hover:rotate-0 border-gray-100 shadow-xl overflow-hidden bg-white rounded-none pb-12">
+                        <CardContent className="p-4 pb-0 bg-white">
+                            <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 border border-gray-100">
+                                <Image
+                                    src="https://picsum.photos/id/1015/600/800" // Placeholder
+                                    alt="Our First Date"
+                                    fill
+                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                />
+                            </div>
+                        </CardContent>
+                        <CardFooter className="absolute bottom-0 left-0 right-0 p-4 pb-6 flex justify-center bg-white">
+                            <div className="font-caveat text-3xl text-gray-700">
+                                The Day It Started
+                            </div>
+                        </CardFooter>
+                    </Card>
                 </motion.div>
 
                 {/* Right: Hand-drawn Map Visual */}
