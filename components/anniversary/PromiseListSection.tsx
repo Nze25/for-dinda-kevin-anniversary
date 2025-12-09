@@ -65,11 +65,13 @@ export default function PromiseListSection() {
                         transition={{ delay: 1 }}
                         className="mt-16 pt-8 border-t border-gray-200"
                     >
-                        <p className="font-playfair text-xl text-gray-500 italic">
-                            Signed, yours forever.
-                        </p>
-                        <div className="mt-8 font-caveat text-4xl text-rose-800 rotate-[-5deg]">
-                            Kevin
+                        <div className="bg-white p-6 rounded-lg shadow-md inline-block">
+                            <p className="font-playfair text-xl text-gray-500 italic">
+                                Signed, yours forever.
+                            </p>
+                            <div className="mt-8 font-caveat text-4xl text-rose-800 rotate-[-5deg]">
+                                Kevin
+                            </div>
                         </div>
                     </motion.div>
                 </div>
@@ -77,3 +79,4 @@ export default function PromiseListSection() {
         </section>
     );
 }
+

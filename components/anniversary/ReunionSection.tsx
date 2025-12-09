@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function ReunionSection() {
     return (
@@ -81,14 +82,18 @@ export default function ReunionSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 3 }}
-                    className="max-w-xl mx-auto bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm border border-white/50"
+                    className="max-w-xl mx-auto"
                 >
-                    <p className="font-caveat text-3xl text-rose-800 mb-2">
-                        ...but ours pressed play again.
-                    </p>
-                    <p className="font-inter text-gray-600">
-                        The time apart didn't break us; it just made the glue stronger. Like Kintsugi, the cracks are now the most beautiful part of our art.
-                    </p>
+                    <Card className="bg-white/60 backdrop-blur-sm border-white/50 shadow-sm">
+                        <CardContent className="p-8">
+                            <p className="font-caveat text-3xl text-rose-800 mb-2">
+                                ...but ours pressed play again.
+                            </p>
+                            <p className="font-inter text-gray-600">
+                                The time apart didn't break us; it just made the glue stronger. Like Kintsugi, the cracks are now the most beautiful part of our art.
+                            </p>
+                        </CardContent>
+                    </Card>
                 </motion.div>
 
             </div>

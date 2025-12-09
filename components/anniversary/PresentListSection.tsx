@@ -3,6 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Gift, Heart, Plane, Coffee, Ticket } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 type GiftItem = {
     id: number;
@@ -54,34 +56,38 @@ export default function PresentListSection() {
                                 style={{ transformStyle: "preserve-3d" }}
                             >
                                 {/* Front of Card (Gift Box) */}
-                                <div className="absolute inset-0 backface-hidden rounded-2xl bg-white/30 backdrop-blur-md border border-white/60 shadow-xl flex flex-col items-center justify-center p-6 bg-gradient-to-br from-white/40 to-white/10">
-                                    <div className="w-20 h-20 rounded-full bg-rose-50 flex items-center justify-center mb-4 shadow-inner">
-                                        <Gift className="w-10 h-10 text-rose-400" />
-                                    </div>
-                                    <h3 className="font-playfair text-xl text-gray-800 font-bold mb-2">Tap to Open</h3>
-                                    <div className="w-16 h-1 bg-rose-200 rounded-full" />
+                                <Card className="absolute inset-0 backface-hidden rounded-2xl border-white/60 shadow-xl flex flex-col items-center justify-center bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-md overflow-hidden">
+                                    <CardContent className="flex flex-col items-center justify-center p-6 w-full h-full">
+                                        <div className="w-20 h-20 rounded-full bg-rose-50 flex items-center justify-center mb-4 shadow-inner">
+                                            <Gift className="w-10 h-10 text-rose-400" />
+                                        </div>
+                                        <h3 className="font-playfair text-xl text-gray-800 font-bold mb-2">Tap to Open</h3>
+                                        <div className="w-16 h-1 bg-rose-200 rounded-full" />
 
-                                    {/* "Ribbon" decoration */}
-                                    <div className="absolute top-0 bottom-0 left-1/2 w-8 -translate-x-1/2 bg-rose-500/10 pointer-events-none" />
-                                    <div className="absolute left-0 right-0 top-1/2 h-8 -translate-y-1/2 bg-rose-500/10 pointer-events-none" />
-                                </div>
+                                        {/* "Ribbon" decoration */}
+                                        <div className="absolute top-0 bottom-0 left-1/2 w-8 -translate-x-1/2 bg-rose-500/10 pointer-events-none" />
+                                        <div className="absolute left-0 right-0 top-1/2 h-8 -translate-y-1/2 bg-rose-500/10 pointer-events-none" />
+                                    </CardContent>
+                                </Card>
 
                                 {/* Back of Card (The Gift) */}
-                                <div
-                                    className={`absolute inset-0 backface-hidden rounded-2xl ${gift.color} border border-white/50 shadow-inner flex flex-col items-center justify-center p-6 text-center`}
+                                <Card
+                                    className={`absolute inset-0 backface-hidden rounded-2xl ${gift.color} border-white/50 shadow-inner flex flex-col items-center justify-center text-center`}
                                     style={{ transform: "rotateY(180deg)" }}
                                 >
-                                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
-                                        <gift.icon className="w-8 h-8 text-gray-700" />
-                                    </div>
-                                    <h3 className="font-caveat text-3xl font-bold text-gray-800 mb-2">{gift.label}</h3>
-                                    <p className="font-inter text-sm text-gray-600 leading-relaxed">
-                                        {gift.description}
-                                    </p>
-                                    <div className="mt-4 px-4 py-1 bg-white/50 rounded-full text-xs font-bold text-gray-500 uppercase tracking-widest">
-                                        Valid Always
-                                    </div>
-                                </div>
+                                    <CardContent className="flex flex-col items-center justify-center p-6 w-full h-full">
+                                        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+                                            <gift.icon className="w-8 h-8 text-gray-700" />
+                                        </div>
+                                        <h3 className="font-caveat text-3xl font-bold text-gray-800 mb-2">{gift.label}</h3>
+                                        <p className="font-inter text-sm text-gray-600 leading-relaxed mb-4">
+                                            {gift.description}
+                                        </p>
+                                        <Badge variant="secondary" className="bg-white/50 text-gray-500 hover:bg-white/70">
+                                            Valid Always
+                                        </Badge>
+                                    </CardContent>
+                                </Card>
 
                             </motion.div>
                         </div>
