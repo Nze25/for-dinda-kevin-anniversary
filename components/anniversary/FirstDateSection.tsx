@@ -25,7 +25,7 @@ export default function FirstDateSection() {
                         <CardContent className="p-4 pb-0 bg-white">
                             <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 border border-gray-100">
                                 <Image
-                                    src="https://picsum.photos/id/1015/600/800" // Placeholder
+                                    src="/images/firstdate/WhatsApp Image 2025-12-09 at 22.47.47.jpeg" // Placeholder
                                     alt="Our First Date"
                                     fill
                                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
