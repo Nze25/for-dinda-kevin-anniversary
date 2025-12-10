@@ -5,7 +5,7 @@ import { Heart } from "lucide-react";
 
 const promises = [
     "I promise to always listen to your stories, even the ones I've heard before.",
-    "I promise to be your biggest cheerleader in every victory and your safe haven in every storm.",
+    "I promise to be your biggest supporter in every victory and your safe haven in every storm.",
     "I promise to make you coffee (or buy it) exactly how you like it.",
     "I promise to never stop trying to make you laugh.",
     "I promise to love you, today, tomorrow, and every day after that.",
