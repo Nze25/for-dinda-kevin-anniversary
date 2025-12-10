@@ -21,8 +21,8 @@ export default function FirstDateSection() {
                     transition={{ duration: 0.8, type: "spring" }}
                     className="relative group mx-auto md:mx-0 max-w-sm"
                 >
-                    <Card className="transform rotate-[-3deg] transition-transform duration-500 group-hover:rotate-0 border-gray-100 shadow-xl overflow-hidden bg-white rounded-none pb-12">
-                        <CardContent className="p-4 pb-0 bg-white">
+                    <Card className="transform rotate-[-3deg] transition-transform duration-500 group-hover:rotate-0 border-gray-100 shadow-xl overflow-hidden bg-white rounded-none">
+                        <CardContent className="p-4 bg-white">
                             <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 border border-gray-100">
                                 <Image
                                     src="/images/firstdate/WhatsApp Image 2025-12-09 at 22.47.47.jpeg" // Placeholder
@@ -32,8 +32,8 @@ export default function FirstDateSection() {
                                 />
                             </div>
                         </CardContent>
-                        <CardFooter className="absolute bottom-0 left-0 right-0 p-4 pb-6 flex justify-center bg-white">
-                            <div className="font-caveat text-3xl text-gray-700">
+                        <CardFooter className="p-4 pt-2 flex justify-center bg-white">
+                            <div className="font-caveat text-3xl text-gray-700 text-center">
                                 The Day It Started
                             </div>
                         </CardFooter>
