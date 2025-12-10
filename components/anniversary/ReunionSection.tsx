@@ -90,7 +90,7 @@ export default function ReunionSection() {
                                 ...but ours pressed play again.
                             </p>
                             <p className="font-inter text-gray-600">
-                                The time apart didn't break us; it just made the glue stronger. Like Kintsugi, the cracks are now the most beautiful part of our art.
+                                The time apart didn't break us, it just made the glue stronger. Like Kintsugi, the cracks are now the most beautiful part of our art.
                             </p>
                         </CardContent>
                     </Card>
