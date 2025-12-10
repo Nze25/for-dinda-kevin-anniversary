@@ -6,6 +6,7 @@ import PresentListSection from "@/components/anniversary/PresentListSection";
 import PromiseListSection from "@/components/anniversary/PromiseListSection";
 import MusicPlayer from "@/components/anniversary/MusicPlayer";
 import { SchoolJourneySection } from "@/components/anniversary/SchoolJourneySection";
+import { ClosingSection } from "@/components/anniversary/ClosingSection";
 // import TimelineSection from "@/components/anniversary/TimelineSection";
 // import MemoryGallery from "@/components/anniversary/MemoryGallery";
 // import LoveLetter from "@/components/anniversary/LoveLetter";
@@ -20,6 +21,7 @@ export default function Home() {
       <PresentListSection />
       <PromiseListSection />
       <SchoolJourneySection />
+      <ClosingSection />
 
       <MusicPlayer />
     </main>

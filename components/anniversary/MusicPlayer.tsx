@@ -34,8 +34,8 @@ export default function MusicPlayer() {
                 </div>
 
                 <div className="flex flex-col mr-2">
-                    <span className="text-xs font-semibold text-gray-800">Our Song</span>
-                    <span className="text-[10px] text-gray-600">Romantic Vibez</span>
+                    <span className="text-xs font-semibold text-gray-800">You!</span>
+                    <span className="text-[10px] text-gray-600">LANY</span>
                 </div>
 
                 <button
@@ -47,7 +47,7 @@ export default function MusicPlayer() {
 
                 <audio
                     ref={audioRef}
-                    src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                    src="/audio/lany-you.mp3"
                     loop
                 />
             </div>

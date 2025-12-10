@@ -75,7 +75,7 @@ export function SchoolJourneySection() {
 
 
             {/* CONTENT: PHASE A - HIGH SCHOOL */}
-            <div className="relative z-10 w-full max-w-6xl mx-auto min-h-screen flex flex-col justify-center py-20">
+            <div className="relative z-10 w-full max-w-6xl mx-auto pt-0 pb-32 flex flex-col justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6">
 
                     {/* Left: Text */}
@@ -126,7 +126,7 @@ export function SchoolJourneySection() {
                                 />
                             </div>
                             <div className="mt-4 font-caveat text-2xl text-center text-gray-600">
-                                Class of '19
+                                Graduation of '25
                             </div>
                         </motion.div>
                         {/* Sticker Doodle */}

@@ -13,14 +13,14 @@ const promises = [
 
 export default function PromiseListSection() {
     return (
-        <section className="py-32 bg-[#Fdf6f6] relative flex justify-center">
+        <section className="pt-32 pb-0 bg-[#Fdf6f6] relative flex justify-center">
             {/* Paper/Scroll Container */}
             <div className="w-full max-w-2xl px-8 relative">
 
                 {/* Paper Texture Background */}
                 <div className="absolute inset-0 bg-[#fff] mx-4 shadow-2xl skew-y-1 transform origin-top-left -z-10 rounded-sm border-l-4 border-l-rose-100/50" />
 
-                <div className="py-16 px-8 md:px-16 text-center">
+                <div className="pt-16 pb-8 px-8 md:px-16 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
