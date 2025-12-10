@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Gift, Heart, Plane, Coffee, Ticket } from "lucide-react";
+import { Gift, Heart, Plane, Coffee, GamepadIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -17,7 +17,7 @@ type GiftItem = {
 const gifts: GiftItem[] = [
     { id: 1, label: "Dinner Date", icon: Coffee, description: "A romantic dinner at your favorite place.", color: "bg-rose-100" },
     { id: 2, label: "Gateway Trip", icon: Plane, description: "A weekend getaway to somewhere new.", color: "bg-sky-100" },
-    { id: 3, label: "Movie Night", icon: Ticket, description: "Unlimited popcorn and a movie marathon.", color: "bg-purple-100" },
+    { id: 3, label: "Playstation Together", icon: GamepadIcon, description: "Playing PS5 Together!", color: "bg-purple-100" },
     { id: 4, label: "Surprise!", icon: Gift, description: "Something special just for you.", color: "bg-amber-100" },
 ];
 
@@ -33,7 +33,7 @@ export default function PresentListSection() {
     };
 
     return (
-        <section className="py-24 bg-gradient-to-b from-white to-pink-50 relative">
+        <section className="py-24 bg-gradient-to-b from-white to-pink-50 relative z-20">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="font-playfair text-4xl md:text-5xl text-rose-900 mb-4">
@@ -46,9 +46,9 @@ export default function PresentListSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                     {gifts.map((gift) => (
-                        <div key={gift.id} className="relative h-64 perspective-1000 group">
+                        <div key={gift.id} className="relative h-64 group" style={{ perspective: "1000px" }}>
                             <motion.div
-                                className={`relative w-full h-full cursor-pointer preserve-3d transition-all duration-500`}
+                                className={`relative w-full h-full cursor-pointer transition-all duration-500`}
                                 onClick={() => toggleGift(gift.id)}
                                 whileHover={{ scale: 1.02 }}
                                 animate={{ rotateY: openedGift === gift.id ? 180 : 0 }}
@@ -56,7 +56,10 @@ export default function PresentListSection() {
                                 style={{ transformStyle: "preserve-3d" }}
                             >
                                 {/* Front of Card (Gift Box) */}
-                                <Card className="absolute inset-0 backface-hidden rounded-2xl border-white/60 shadow-xl flex flex-col items-center justify-center bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-md overflow-hidden">
+                                <Card
+                                    className="absolute inset-0 rounded-2xl border-white/60 shadow-xl flex flex-col items-center justify-center bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-md overflow-hidden"
+                                    style={{ backfaceVisibility: "hidden" }}
+                                >
                                     <CardContent className="flex flex-col items-center justify-center p-6 w-full h-full">
                                         <div className="w-20 h-20 rounded-full bg-rose-50 flex items-center justify-center mb-4 shadow-inner">
                                             <Gift className="w-10 h-10 text-rose-400" />
@@ -72,8 +75,8 @@ export default function PresentListSection() {
 
                                 {/* Back of Card (The Gift) */}
                                 <Card
-                                    className={`absolute inset-0 backface-hidden rounded-2xl ${gift.color} border-white/50 shadow-inner flex flex-col items-center justify-center text-center`}
-                                    style={{ transform: "rotateY(180deg)" }}
+                                    className={`absolute inset-0 rounded-2xl ${gift.color} border-white/50 shadow-inner flex flex-col items-center justify-center text-center`}
+                                    style={{ transform: "rotateY(180deg)", backfaceVisibility: "hidden" }}
                                 >
                                     <CardContent className="flex flex-col items-center justify-center p-6 w-full h-full">
                                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">

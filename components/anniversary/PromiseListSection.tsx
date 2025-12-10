@@ -13,7 +13,7 @@ const promises = [
 
 export default function PromiseListSection() {
     return (
-        <section className="pt-32 pb-0 bg-[#Fdf6f6] relative flex justify-center">
+        <section className="pt-32 pb-24 bg-[#Fdf6f6] relative flex justify-center z-20">
             {/* Paper/Scroll Container */}
             <div className="w-full max-w-2xl px-8 relative">
 

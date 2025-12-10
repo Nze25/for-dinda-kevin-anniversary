@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function ReunionSection() {
     return (
-        <section className="py-32 relative overflow-hidden">
+        <section className="py-32 relative overflow-hidden z-20">
             {/* Background Transition */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#e8e4e6] via-[#d6cbd3] to-white -z-20" />
 
