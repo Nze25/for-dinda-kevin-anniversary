@@ -5,12 +5,12 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 const memories = [
-    { id: 1, src: "https://picsum.photos/id/1015/400/500", alt: "Laughing together", rotation: -3, zIndex: 1 },
-    { id: 2, src: "https://picsum.photos/id/1016/400/300", alt: "Sunset view", rotation: 2, zIndex: 2 },
-    { id: 3, src: "https://picsum.photos/id/1018/400/500", alt: "Coffee date", rotation: -1, zIndex: 3 },
-    { id: 4, src: "https://picsum.photos/id/1019/400/400", alt: "Silly faces", rotation: 4, zIndex: 1 },
-    { id: 5, src: "https://picsum.photos/id/1025/400/500", alt: "Trip memory", rotation: -2, zIndex: 2 },
-    { id: 6, src: "https://picsum.photos/id/1020/400/300", alt: "Holding hands", rotation: 3, zIndex: 1 },
+    { id: 1, src: "/images/firstdate/WhatsApp Image 2025-12-09 at 22.47.472.jpeg", alt: "Laughing together", rotation: -3, zIndex: 1 },
+    { id: 2, src: "/images/reunion/WhatsApp Image 2025-12-09 at 22.47.50.jpeg", alt: "Sunset view", rotation: 2, zIndex: 2 },
+    { id: 3, src: "/images/reunion/WhatsApp Image 2025-12-09 at 22.47.49.jpeg", alt: "Coffee date", rotation: -1, zIndex: 3 },
+    { id: 4, src: "/images/univ-moments/WhatsApp Image 2025-12-09 at 22.47.493.jpeg", alt: "Silly faces", rotation: 4, zIndex: 1 },
+    { id: 5, src: "/images/univ-moments/WhatsApp Image 2025-12-09 at 22.47.494.jpeg", alt: "Trip memory", rotation: -2, zIndex: 2 },
+    { id: 6, src: "/images/firstdate/WhatsApp Image 2025-12-09 at 22.47.473.jpeg", alt: "Holding hands", rotation: 3, zIndex: 1 },
 ];
 
 export default function MemoriesSection() {
