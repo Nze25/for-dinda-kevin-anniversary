@@ -199,7 +199,7 @@ export function SchoolJourneySection() {
                                 Finding Our <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">Rhythm</span>
                             </h2>
                             <p className="font-inter text-lg text-gray-300 leading-relaxed font-light">
-                                Late night study sessions turning into milk dates. Exploring a new campus, new dreams, and a maturing love that feels steady and sure.
+                                Late night study sessions turning into cafe dates. Exploring a new campus, new dreams, and a maturing love that feels steady and sure.
                             </p>
                             <div className="flex gap-4 pt-4">
                                 <div className="flex flex-col items-center bg-white/5 p-4 rounded-xl backdrop-blur-sm border border-white/10">
