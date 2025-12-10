@@ -6,8 +6,8 @@ import { Sparkles, GraduationCap, Heart, Star, BookOpen, Coffee } from "lucide-r
 import Image from "next/image";
 
 // Placeholder images - replace with actual assets later
-const HS_IMAGE = "https://images.unsplash.com/photo-1544527232-c87a177307d1?q=80&w=2070&auto=format&fit=crop";
-const UNI_IMAGE = "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop";
+const HS_IMAGE = "/images/highschool-moments/WhatsApp Image 2025-12-09 at 22.47.48.jpeg";
+const UNI_IMAGE = "/images/univ-moments/WhatsApp Image 2025-12-09 at 22.47.48.png";
 
 export function SchoolJourneySection() {
     const containerRef = useRef<HTMLDivElement>(null);
