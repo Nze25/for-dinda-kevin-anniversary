@@ -17,7 +17,7 @@ type GiftItem = {
 const gifts: GiftItem[] = [
     { id: 1, label: "Dinner Date", icon: Coffee, description: "A romantic dinner at your favorite place.", color: "bg-rose-100" },
     { id: 2, label: "Gateway Trip", icon: Plane, description: "A weekend getaway to somewhere new.", color: "bg-sky-100" },
-    { id: 3, label: "Playstation Together", icon: GamepadIcon, description: "Playing PS5 Together!", color: "bg-purple-100" },
+    { id: 3, label: "Playstation Together", icon: GamepadIcon, description: "Playing PS4 Together!", color: "bg-purple-100" },
     { id: 4, label: "Surprise!", icon: Gift, description: "Something special just for you.", color: "bg-amber-100" },
 ];
 
